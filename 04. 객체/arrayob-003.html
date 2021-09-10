@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var greenArr = ["교대","방배","강남"];
+        var yellowArr = ["미금","정자","수서"];
+        
+        greenArr.splice(2,1,"서초","역삼"); //2번 인덱스부터 한개의 요소를 삭제후 서초,역삼 삽입
+        console.log(greenArr);
+
+        var data1 = yellowArr.pop(); //맨뒤 인덱스의 값을 삭제후 data1에 담음
+        //변수에 담아줬기때문에 원본데이터의 주소를 빌려와서 팝하는 것임. 따라서 원본의 직접적인 요소의 값은 변하지 않음
+        //원본 자체의 요소를 삭제하고 싶으면 yellowArr.pop()을하면됨
+        // console.log(yellowArr);
+        var data2 = yellowArr.shift();  //맨 앞 인덱스의 값을 삭제후 data2에 담음
+        // console.log(yellowArr);
+
+        yellowArr.push(data2);
+        console.log(yellowArr);
+        console.log(yellowArr.length);
+        yellowArr.unshift(data1);
+        console.log(yellowArr);
+    </script>
+</body>
+</html>

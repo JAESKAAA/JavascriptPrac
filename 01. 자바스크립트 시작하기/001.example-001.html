@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Javascript</title>
+</head>
+<body>
+    <!-- 바디 태그에 직접 추가되는 javascript는 항상 body 태그 최하단에 선언하기 -->
+    <!-- 그 이유는, 브라우저가 HTML문서를 전부 읽고 마지막에 자바스크립트를 읽어야 혹시 모를 변수 및 요소 누락을 미연에 방지할 수 있음 -->
+    <script>
+        while(true){
+        let age = prompt("당신은 몇살입니까?");
+        if(age <20){
+            document.write("당신은 미성년자 입니다.");
+            break;
+        } else if(age >= 20){
+            document.write("당신은 성인입니다.");
+            break;
+        }else{
+            alert("숫자만 입력해주십시오.");
+        }
+        }
+        document.write("<br><br>환영합니다")
+    </script>
+
+    
+</body>
+</html>

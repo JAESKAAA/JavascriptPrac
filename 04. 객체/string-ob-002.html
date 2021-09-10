@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userEmail = prompt("당신의 이메일 주소는 ?","");
+        var arrUrl = [".co.kr",".com",".net","or.kr","go.kr"];
+
+        var check1=false;
+        var check2=false;
+
+        //문자열에 "@" 가 있으면 "@"의 인덱스를 반환, 없으면 -1 반환
+        if(userEmail.indexOf("@")>0){
+            check1=true;
+        }
+        //arrUrl의 형식 하나씩 꺼내서 비교하고 해당하는 값이 존재하면 해당되는 인덱스 반환
+        for(var i=0; i<arrUrl.length; i++){
+            if(userEmail.indexOf(arrUrl[i])>0){
+                check2 = true;
+            }
+        }
+        
+        if(check1 && check2){
+            document.write(userEmail);
+        } else {
+            alert("이메일 형식이 잘못 되었습니다.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

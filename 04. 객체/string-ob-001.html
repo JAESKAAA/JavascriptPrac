@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스트링 객체</title>
+</head>
+<body>
+    <script>
+        var t = "Hello Thank you good luck to you";
+
+        //인덱스 16인 문자 반환
+        document.write("=======charAt========","<br>");
+        document.write(t.charAt(16),"<br>");
+
+        //you를 가장 처음만나는 index 반환 (12)
+        document.write("========indexOf=======","<br>");
+        document.write(t.indexOf("you"),"<br>");
+        
+        document.write("========lastIndexOf=======","<br>");
+        document.write(t.lastIndexOf("you"),"<br>");
+        
+        
+        document.write("========lastIndexOf=======","<br>");
+        document.write(t.lastIndexOf("you",25),"<br>");
+        
+        document.write("========match=======","<br>");
+        document.write(t.match("luck"),"<br>"); //똑같은 문자열을 반환해줌
+        
+        document.write("========search=======","<br>");
+        document.write(t.search("you"),"<br>");
+        
+        document.write("========substr=======","<br>");
+        document.write(t.substr(21,4),"<br>"); //문자열 21번째 인덱스부터 4글자 가져옴
+        
+        document.write("========substring=======","<br>");
+        document.write(t.substring(6,12),"<br>"); // 문자열 인덱스 6부터 12전까지 문자를 가져옴
+        
+        document.write("========replace=======","<br>");
+        document.write(t.replace("you","me"),"<br>");
+        
+        document.write("========toLowerCase=======","<br>");
+        document.write(t.toLowerCase(),"<br>");
+        
+        document.write("========toUpperCase=======","<br>");
+        document.write(t.toUpperCase(),"<br>");
+        
+        document.write("========length=======","<br>");
+        document.write(t.length,"<br>");
+        
+        document.write("========split=======","<br>");
+        var s = t.split(" "); // 공백을 기준으로 문자를 분리함. 분리된 문자열은 배열에 저장되어 s에 할당 됨
+
+        document.write("스플릿한 문자의 0번째 인덱스 출력: "+s[0],"<br>");
+        document.write(s.length,"<br>");
+        document.write("스플릿한 문자의 4번째 인덱스 출력: "+s[4],"<br>");
+
+        var str = "A";
+        var t = str.charCodeAt(0);
+
+        document.write("str의 아스키코드 반환: "+t,"<br>");
+        document.write("65에 해당하는 아스키코드 반환: "+String.fromCharCode(65),"<br>");
+
+        var userName = prompt("당신의 영문 이름은?","");
+        var phoneNum = prompt("당신의 핸드폰 번호는?","");
+
+        var upperName = userName.toUpperCase();
+        var result = phoneNum.substring(0,phoneNum.length-4)+"****";
+
+        document.write("유저 이름 : "+upperName,"<br>");
+        document.write("유저 폰번호 : "+result,"<br>");
+
+
+
+        
+</script>
+</body>
+</html>
